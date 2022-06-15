@@ -16,8 +16,8 @@ function fetchFile(url){
         aTage.download = url.replace(/^.*[\\\/]/,'');
         document.body.appendChild(aTage); //adding <a> tag inside body
         aTage.click();
-        aTage.remove();
-        URL.revokeObjectURL(tempUrl);//removing tempUrl from document
+        aTage.remove();//removing tempUrl from document
+        URL.revokeObjectURL(tempUrl);
         downloadbtn.innerText = "Download File";
     }).catch(() => {
         downloadbtn.innerText = "Download File";
